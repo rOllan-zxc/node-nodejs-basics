@@ -1,11 +1,11 @@
-import {__dirname} from "./consts.js";
-import {readdir} from "fs/promises";
+import {__dirname} from "./consts.js"
+import {readdir} from "fs/promises"
 
 const list = async () => {
-    const files = __dirname + '/files';
+    const files = __dirname + '/files'
     try{
-        const files_arr = [];
-        const dir_files = await readdir(files);
+        const files_arr = []
+        const dir_files = await readdir(files)
         await Promise.all(dir_files.map(n=>files_arr.push(`${n}`)))
         console.log(files_arr)
     } catch (err){
@@ -13,4 +13,4 @@ const list = async () => {
     }
 };
 
-await list();
+await list()
