@@ -1,9 +1,9 @@
-import {__dirname} from "./consts.js";
+import {__dirname} from "./consts.js"
 import {unlink} from "fs/promises"
 
 
 const remove = async () => {
-    const delFile = __dirname + '/files/fileToRemove.txt';
+    const delFile = __dirname + '/files/fileToRemove.txt'
     try{
         await unlink(delFile);
     } catch (err){
@@ -11,4 +11,4 @@ const remove = async () => {
     }
 };
 
-await remove();
+await remove()
