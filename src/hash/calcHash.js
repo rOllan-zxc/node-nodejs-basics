@@ -10,7 +10,7 @@ const calculateHash = async () => {
     const file_to_hash = __dirname + '/files/fileToCalculateHashFor.txt'
     try {
         const str_to_hash = await readFile(file_to_hash, {encoding:'utf8'})
-        const hash = await createHash('sha3-256').update(str_to_hash).digest('hex');
+        const hash = createHash('sha3-256').update(str_to_hash).digest('hex');
         console.log(hash)
     } catch (err){
         throw new Error('Hash operation failed')
