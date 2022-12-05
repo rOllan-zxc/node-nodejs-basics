@@ -2,6 +2,7 @@ import {writeFile} from "fs/promises"
 import {__dirname} from "./consts.js"
 import {existsSync} from 'fs'
 
+
 const create = async () => {
     const file_path = __dirname + '/files/fresh.txt'
         if(existsSync(file_path)){
